@@ -1,30 +1,28 @@
+
 import java.util.Scanner;
+
 
 public class Questao3 {
     public static void main(String[] args) {
-        int salario, bonus;
-        String desempenho;
+        double salario, bonus;
+        String des;
 
         Scanner ler = new Scanner(System.in);
-        
-        System.out.println("Informe o valor da pontuação do funcionário: (0-100)");
-        desempenho = ler.next();
 
-        if(desempenho == "Ótimo" des|| "ou"){
-            System.out.println("Insatisfatório");
+        System.out.println("Informe o desempenho do funcionario: ");
+        des = ler.next();
+
+        System.out.println("Informe o salario do funcionario: ");
+        salario = ler.nextDouble();
+
+        if(des.equals("Otimo")){
+            bonus = salario + (salario * 0.20);
+            System.out.println("O salario do funcionario após bonús é: " + bonus);
         }
-        if( > 25 && pontuacao <= 50){
-            System.out.println("Regular");
+        if(des.equals("Bom")){
+            bonus = salario + (salario * 0.10);
+            System.out.println("O salario do funcionario após bonús é: "+ bonus);
         }
-        if(pontuacao > 50 &&  pontuacao <= 75){
-           System.out.println("Bom");
-        }
-        if(pontuacao > 75 && pontuacao <= 100){
-            System.out.println("Ótimo");
-        }
-        if(pontuacao > 100){
-            System.out.println("Número incorreto, tente novamente");
-        } 
     }
     
 }
